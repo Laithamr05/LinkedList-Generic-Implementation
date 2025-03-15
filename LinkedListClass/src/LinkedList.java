@@ -94,15 +94,11 @@ public class LinkedList<T> {
 	}
 
 	public void deleteAll() {
-		Node current = head;
-		while (current != null) {
-			if (current.next != null)
-				current.next = current.next.next;
-		}
+		head = null;
 	}
 
 	public int size() {
-		if (head == null || head.next == null)
+		if (head == null)
 			return 0;
 
 		int i = 0;
